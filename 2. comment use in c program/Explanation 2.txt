@@ -1,0 +1,75 @@
+* A Comment is a note to Coder that Coder puts into Source Code.
+All Comments are ignored by the Compilers.
+Comments are used primarily to document the meaning and purpose of coder's source code, 
+so that coder can remenber later how it functions and how to use it.
+
+
+* Comments are two kinds:
+1. Single Line Comment by C++ compiler
+       // this is single line comment
+   
+2. ANCI C comment:  /*       */
+    i) single line Comment:   /* this is single line comment */
+    ii) Multi-line Comment:  
+        /*  this is
+          multi-line
+           comment */
+
+* Note: 
+In C program, a Comment can go anywhere except in the middle of any C Keyword, 
+Function name or variable name.
+error-->  re/* My name is Mr. bey */turn 0;
+error-->  int X/* Hi World! */_y ( );
+error-->  char  My/* Hello */_Name;
+
+Comments may not be nested.
+error-->  /* Hello /* My sister */ world*/
+
+
+*Codes:
+
+code1: no error
+// this is a single line comment
+/* this is another single line comment */
+
+int main(void)
+{
+    /* this is
+    multi-line
+    comment */
+
+    return 0;
+}
+
+
+code2: has error
+/ this is a single line comment
+/* this is another single line comment 
+
+int main(void)
+{
+     this is
+    multi-line
+    comment */
+
+    return 0;
+}
+
+
+code3: has error
+/ this is a single line comment
+/* this is another single line comment 
+
+int m/*A comment*/ain(void)
+{
+     this is
+    multi-line
+    comment */
+    
+    //variable declaration
+    int vari/* a comment*/able_1;
+
+    re/* a comment*/turn 0;
+}
+
+   
