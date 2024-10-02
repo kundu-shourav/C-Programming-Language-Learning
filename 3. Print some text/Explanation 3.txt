@@ -1,0 +1,75 @@
+* In C program, except main( ) function, Coder can use Functions in two ways:
+1. Custom or user build Function
+2. Built-in Standard Library Function
+
+*The built-in Standard Library contains functions to perform disk I/O (input/output),
+String manipulations, mathematical computations, and much more.
+Library functions can be enhanced and expanded as needed to accomodate changing circumstances.
+
+
+*To use a Library Function in C Program; it is needed to add Header File.
+Header File has .h or .H extention.
+
+Header File contains all information about the Standard Library Functions in various files.
+
+A C_Program_Compiler uses the information in these files to handle the Library functions properly.
+
+*How to add header file:
+        #include Preprocessor_Directive
+All C_Program_Compilers use as their 1st phase of compilation a Preprocessor, which performs various 
+manipulations on Source code/File before it is compiled.
+Preprocessor_Directives are not actually part of the C_Language, but rather instructions from 
+Programmer/Codder to the Compiler.
+The #include directive tells the preprocessor to read in another file and include it with coder's program.
+Note: #include directive does not end with a semicolon (;)
+
+
+*How to print in output terminal : a word/words/sentance
+answer: using Library function: printf()
+
+printf( ) is C's general purpose output function.
+
+*printf structure:   printf(Function Argument)
+    function argument--> input in function : String_to_output
+
+* String--> one or more Characters enclosed between double Quotes(")
+eg, 'c', "word", "my name is kundu"
+
+* which header file is neededfor printf( )?
+answer: standard(std) input(i) output(o) [stdio] header file
+
+* how to use this in C Program?
+answer:
+        one way:   #include<stdio.h>      --> traditional
+      another way:   #include<STDIO.H>    -->  not Traditional
+
+
+*Codes:
+
+code1:
+/* print some text */
+//header file adding - lower-case letters
+#include <stdio.h>
+
+//main function
+int main(void)
+{
+    //printf function statement
+    printf("this is a string\n");
+    
+    return 0;
+}
+
+code2:
+/* print some text */
+//header file adding - upper-case letters
+#include <STDIO.H>
+
+//main function
+int main(void)
+{
+    //printf function statement
+    printf("this is a string\n");
+    
+    return 0;
+}
