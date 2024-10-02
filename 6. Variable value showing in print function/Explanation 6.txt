@@ -1,0 +1,70 @@
+* how to show any variable value>
+answer: using Format Specifier in printf( ) fuction
+
+* Format Specifier or Format Code informs printf( ) [output displaying function ] or 
+scanf() [ input taking function ]
+that a different type item is to be displayed or taken.
+The Value associated with a format code is displayed at the point where that format code is encountered 
+in the String.
+
+*formate specifiers types:
+data type                      printf( )                scanf( ) 
+character                      %c                       %c
+integer / decimal              %d or %i                       %d
+floating point                 %f                       %f
+double                         %f                       %lf [ only difference ]
+
+* basic Backlash constants of printf( ) function:
+new line or line braek --> \n  [prints 2nd line as a sperate from 1st line]
+
+for example: 
+            printf("this is 1st line\n");
+            printf("this is 2nd line");
+    output--> print 2 lines on screen as 2 lines
+
+
+horizontal Tab --> \t   [prints 2nd line or word or letter form 1st line using a Tab spearation ]
+
+for example: 
+            printf("this is 1st line\t");
+            printf("this is 2nd line");
+    output--> print 2 lines on screen in one line but there is a a tab gap betwwen them.
+
+*codes:
+code1:
+/*printf( )'s basic backlash constants*/
+#include<stdio.h>
+
+int main()
+{
+    /*new line application*/
+    printf("this is 1st line\n");
+    printf("this is 2nd line");
+
+    printf("\n");
+
+    /*new tab application*/
+    printf("this is 1st line\t");
+    printf("this is 2nd line");
+
+    return 0;
+}
+
+
+code2:
+/*printing variable value*/
+#include <stdio.h>
+
+int main()
+{
+    /* variable value declare*/
+    char c = 'D'; int a = 23;
+    float b = 109.325;  double f = 3142536.34453636366788;
+    //printing all
+    printf("This is character value: "); printf("%c\n", c);
+    printf("This is integer value: "); printf("%d\t", a); printf("%i\n", a);
+    printf("This is floating value: "); printf("%f\n", b);
+    printf("This is double value: "); printf("%f", f);
+
+    return 0;
+}
