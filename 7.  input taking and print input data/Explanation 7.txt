@@ -1,0 +1,57 @@
+* how to input a variable value and print that?
+answer: using scanf( ) function, formate specifier and printf( ) function
+
+* Reacall Format Specifier
+Format Specifier or Format Code informs printf( ) [output displaying function ] or scanf() [ input taking function ]
+that a different type item is to be displayed or taken.
+The Value associated with a format code is displayed at the point where that format code is encountered in the String.
+
+*formate specifiers types:
+data type                      printf( )                scanf( ) 
+character                      %c                       %c
+integer / decimal              %d or %i                       %d
+floating point                 %f                       %f
+double                         %f                       %lf [ only difference ]
+
+
+*Scanf( ) function --> variable input function
+structure:
+                 sacnf("format code"; &variable_name);
+      & --> it allows a function to place a value into one of its arguments.
+for example:
+               float x = 234.34355;
+               scanf("%f", &x);
+               printf("this is float data:  %f", x);
+
+note: different for double data in format specifier
+for example:
+               double y = 6547.464578585989;
+               scanf("%lf", &y);
+               printf("this is float data:  %f", y);
+
+when a coder enter a number at the keyboard, coder are simply typing a string of digits. the scanf( ) function 
+waits until coder has passed Enter Button before it converts the String into the internal binary format used by 
+the computer.
+
+*codes:
+code:
+/* input taking and print that input data*/
+#include <stdio.h>
+
+int main()
+{
+    //variable declaration
+    char c; int a; float b; double f;
+    /* variable value input and print*/
+    printf("enter your character data: ");
+    scanf("%c", &c); printf("your character data is %c\n", c);
+    printf("enter your integer data: ");
+    scanf("%d", &a); printf("your integer data is %d\n", a);
+    printf("enter your floating data: ");
+    scanf("%f", &b); printf("your floating data is %f\n", b);
+    // notice the difference of format specifier
+    printf("enter your double data: ");
+    scanf("%lf", &f); printf("your double data is %f\n", f);
+    
+    return 0;
+}
