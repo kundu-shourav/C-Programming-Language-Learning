@@ -1,0 +1,97 @@
+* Data Type
+C language supports 5 different basic data types.
+Type                             Keyword               Memory
+1. Character data                char                  1 Byte or 8 bits
+2. Signed whole numbers          int                   2 Byte or 4 Byte
+   (interger or decimal)
+3. Floating-point numbers        float
+4. Double-precision              double
+   Floating-point numbers
+5. Valueless                     void
+   (special purpose data type)
+note: 1,2,5 are applicable for Function data type
+
+
+* Constant & Variable
+
+Constant: all Number values are constant. A Constant is a fixed value used in C Program.
+Constants are often used to initialized variables at the beginning of a program's execution.
+
+Varibale: a Variable is a named memory location that can hold various values.
+in C program, all variables must be declared before they can be used.
+
+* Case-sensitive property of C Language
+C is a case-sensitive programming language; which means that C recognizes the difference between 
+Upper and Lower case letters.
+for example:
+Not Equal--> Myfunc & myfuNc
+
+* how to declare the variables and fuctions name?
+answer: Function and Variable Names must be composed of any only the Upper-case and Lower-case letters 
+of the Alphabet [A-Z] [a-z], the Digits [0-9] and the underscore [ _ ]
+Note1: a Digit can't start a Function or variable name.
+for example:
+error --> 9MY_hob      corret-->  My_9_hub  or   My_hob_9
+
+Note2: before Name, there must be data type
+for exaple:
+int my_variable       float b        char name     void my_fuc1 (parameter1)
+
+*Codes:
+
+code1:
+/*Variable declaration*/
+//header file
+#include<stdio.h>
+
+int main()
+{
+
+    /* variable declare*/
+    int class_number; 
+    float Age; 
+    double salary; 
+    char Name;
+    // there is no void variable, it shows error
+    void variable1;
+
+    return 0;
+}
+
+
+code2:
+/*Variable declaration*/
+//header file
+#include<stdio.h>
+
+int main()
+{
+
+    /* variable declare*/
+    int class_number; 
+    float Age; 
+    double salary; 
+    char Name;
+
+    return 0;
+}
+
+
+code3:
+/*Variable declaration*/
+//header file
+#include<stdio.h>
+
+int main()
+{
+
+    /* variable declare*/
+    int class_number; float Age; double salary; char Name;
+    //void variable1;
+    /* multiple same data type variable declare*/
+    //c compiler ignor spaces
+    char a,b,c;    int x,y,z;
+    float e,f,g;   double v,w,u;
+
+    return 0;
+}
