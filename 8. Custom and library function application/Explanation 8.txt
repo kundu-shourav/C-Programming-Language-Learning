@@ -1,0 +1,168 @@
+* Function overview
+Functions arethe building blocks of C programming Language.
+* Function Structure:
+   
+  Return_Data_Type Function_Name ( Parameter_list )
+  {
+    Statement 1;
+    Statement 2;
+  }
+
+If a function does not return a value, then its return type should be --> void.
+eg.        void function_name(parameter)
+           {
+                 statement 1;
+           }
+
+and the parameter has data type:eg.  int func_name( int a )
+
+If a function does not use parameters, then its parameter list should contain the keyword--> void
+eg.        int function_name(void)
+           {
+                 statement 1;
+           }
+
+
+* The only Function that C Program must have is Main Function [ main( ) ]. 
+The main function [ main ( ) ] is where execution of C Program begins. That is , when any C Program begins running, it starts executing the statements inside
+Main function beginning with the 1st Statement after the Openning Curly Brace [ { ]. C Program ends when Main function's Closing Curly Brace is reached [ } ].
+
+* Main function can be two types: either interger/decimal (int) or void 
+
+1. void main ( ) returns nothing. so, its parameter list should be contain the keyword void.  
+The Void tells the compiller that main( ) does not have any parameters.
+Hence, there is no statement inside of this.
+void main can be expressed :
+ i) void main(void)   ---> standard way    ii) void main( )    ---> common way
+
+2. int main ( ) returns an interger value and that is 0. : retrun 0;  --> this is the unchanged statement.
+By convention, a return value of zero( 0 ) from main( ) indicates normal program termination. 
+Any other value represents an Error : return 12; --> this is error statement.
+int main can be expressed in two ways:
+ i) int main(void)   ---> standard way   ii) int main( )    ---> common way
+
+Note: int main(void) or int main( ) is recommented
+
+
+*Function Prototype and function skeletal
+a function prototype declares a function before it is used and prior to its definition.
+A Prototype consists of a function's name, its return type and its parameter list.
+It is terminated by Semicolon (;) and it is always place outside of and before of main( ) function.
+Note: the only function that does not need a prototype is main( ) since it is predefined by C Language.
+
+function skeletal will be palce after main function
+
+eg.   #include<stdio.h>
+      //function 1 prototype  declare
+      void my_func1(void);
+      //function 2 prototype  declare
+      int my_func2(parameter);
+
+      // main function declare
+      int main(void)  { staement1; }
+      
+      //function 1 skelatal 
+      void my_func1(void)
+      { 
+       /*body of function here*/
+      }
+
+      //function 2 skelatal
+      int my_func2(parameter)
+      {
+       /*body of function here*/
+      }
+      
+
+
+*what happens when a function is called?
+answer: when a function is called, execution transfers to that function. When the end of that function is reached, 
+execution returns to a point immediately after the place at which the function was called.
+Traditionally, main( ) is not called by any other function, but there is no technical restriction to this effect.
+
+* Return value
+In C language, a function may return a value to the calling Routine.
+if there is no parameters, then the function will be void type and there is no return value.
+Note: here, A return statement can also be used by itself, without a return value.
+
+for example:
+void num(void)                |          void num(void)
+{                             |          {
+   statement1;                |              statement1;  
+                              |              return; /*valid statement*/
+}                             |          }
+
+If a function does not explicitly specify areturn type, it is assumed to return an integer by default.
+eg.
+   func(void)
+   {
+     return 10;
+   }
+
+* Math Function
+do not need to write body and prototype
+C's standard library function, square root [ sqrt( ) ] needs MATH.H or math.h header file
+eg.
+/*header file MATH.H use*/
+#include<math.h>
+
+#include<stdio.h>
+
+int main(void)
+{
+  // square root library function
+  float a = sqrt(10.0);
+  printf("%f", a);
+
+  return 0;
+}
+
+
+*codes:
+
+#include<stdio.h>
+#include<math.h>
+/*protype declare*/
+void func1(void);
+void func2(void);
+int func3( );
+//parameter type declare in function parameter
+float func4(float parameter);
+
+int main()
+{
+    float a, b = 10.00;
+    int c;
+    c = func3();
+    printf("value is: %d\n", c);
+    func1(); func2();
+    a = func4(b);
+    printf("sqrt answer is : %f\n", a);
+
+    return 0;
+}
+
+//function skeletal
+void func1( )
+{
+   printf("this is func1 message.\n");
+}
+void func2( )
+{
+   printf("this is func2 message.\n");
+   return;
+}
+int func3( )
+{
+   return 45;
+}
+
+float func4(float parameter)
+{
+   float x;
+   printf("parameter value is : %f\n", parameter);
+   x = sqrt(parameter);
+
+   return x;
+}
+
