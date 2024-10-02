@@ -1,0 +1,91 @@
+* Function parameter and Argument
+
+* Function overview
+Functions arethe building blocks of C programming Language.
+* Function Structure:
+   
+  Return_Data_Type Function_Name ( Parameter_list )
+  {
+    Statement 1;
+    Statement 2;
+  }
+
+If a function does not return a value, then its return type should be --> void.
+eg.        void function_name(parameter)
+           {
+                 statement 1;
+           }
+
+and the parameter has data type:eg.  int func_name( int a )
+
+If a function does not use parameters, then its parameter list should contain the keyword--> void
+eg.        int function_name(void)
+           {
+                 statement 1;
+           }
+
+
+* The only Function that C Program must have is Main Function [ main( ) ]. 
+The main function [ main ( ) ] is where execution of C Program begins. That is , when any C Program begins running, 
+it starts executing the statements inside
+Main function beginning with the 1st Statement after the Openning Curly Brace [ { ]. 
+C Program ends when Main function's Closing Curly Brace is reached [ } ].
+
+
+*Function Argument 
+Argument --> how many parameter value can input!
+A Function's Argument is a value that is passed to the function when the function is called.
+A function in C can have from zero to several arguments.
+ANSI C standard specifies that a function must be able to take at least 31 Arguments.
+
+For a function to be able to take arguments, special variables to receive argument values must be declared.
+These are called the Formal Parameters of the Function.
+The formal Parameters are declared betwwen the parentheses that follow the function's name.
+  function_name( parameter1, paremeter2 )
+
+Functions that take Arguments are called Parameterized Functions.
+Argument refers to the value that is passed to a function.
+
+In C Program's functions, Arguments are always seperated by Commas(,)
+
+eg;
+
+void sum(int X, int Y)
+{
+  printf("%d", X+Y);
+}
+
+
+* function calling in another function
+int num(int a, int b)
+{
+  sum(a,b);
+}
+
+
+*codes:
+code1:
+/*function Argument*/
+#include <stdio.h>
+void sum(int X, int Y);
+float divid(float A, float B);
+int main()
+{
+    int a, b; a = 10; b = 20;
+    float c,d; c = 5.67; d = 2.34;
+    sum(a,b);
+    printf("answer is : %f\n", divid(c,d));
+    return 0;
+}
+void sum(int X, int Y)
+{
+  printf("SUM is: %d\n", X+Y);
+}
+float divid(float A, float B)
+{
+  int a,b; a = 2; b = 5;
+  //function call from another function
+  sum(a,b);
+  return A/B;
+}
+
