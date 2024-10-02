@@ -1,0 +1,79 @@
+* Local and Global variables
+There are Two places where variables are declared:
+             1. inside a function     ----> Local variable
+             2. outside all functions ----> Global variable
+
+*Variables declared outside all functions are called --> Global Variables.
+they may be accessed by an function in C Program
+Global variables exist the entire time when C Program is executing.
+
+*Variables declarted inside a function are called --> Local Variables.
+A local variable is known to and may be accessed by - only the Function in which it is declared.
+
+Caution:
+The local variables ( name: Count ) in one function have no relationship to the local variables ( name: Count )
+in anothyer function.
+
+Local variables are created when a function is called and they are destroyed when the function is existed.
+Therefore, LOcal variables do not maintain their values between function calls.
+
+*codes:
+
+code1:
+/* local and global variables*/
+#include <stdio.h>
+//function prototype declare
+void fun1(void);
+void fun2(void);
+//global variable declaration
+int a = 10;
+
+int main()
+{
+    fun1(); fun2();
+    return 0;
+}
+
+void fun1(void)
+{
+    printf("global variable a is : %d\n", a);
+}
+
+void fun2(void)
+{
+    int a = 20;
+    printf("here a is local variable: %d", a);
+}
+
+
+code2: shows error
+/* local and global variables*/
+#include <stdio.h>
+//function prototype declare
+void fun1(void);
+void fun2(void);
+//global variable declaration
+int a = 10;
+
+int main()
+{
+    fun1(); fun2();
+    return 0;
+}
+
+void fun1(void)
+{
+    int b = 30;
+    printf("global variable a is : %d\n", a);
+    printf("fun1 variable b is : %d\n", b);
+}
+
+void fun2(void)
+{
+    int a = 20;
+    printf("here a is local variable: %d", a);
+    printf("fun1 variable b is : %d\n", b); --> error line
+}
+
+
+
