@@ -1,0 +1,29 @@
+* Value assign in variable
+
+assingment operator --> =  [ equal sign, as we are familiar with ]
+structure:
+   variable name   assingment operator  value
+
+for example:   Number1 =  20;
+
+note: Charater data value is always inside of single quation: char l1 = 'd' or char num = '2'
+
+
+*codes:
+
+code1:
+/*assign value to declared variables*/
+#include <stdio.h>
+
+int main()
+{
+    // variable declaration and value assign
+    int a, b, c;
+    a = 1; b = 2; c = 406;
+    float fnum;
+    fnum = 203.35235;
+    char c1, c2, c3 = 'D';
+    c1 = 'd'; c2 = '3';
+
+    return 0;
+}
