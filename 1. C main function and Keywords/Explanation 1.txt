@@ -1,0 +1,138 @@
+* A C Program file has an extension of .c
+
+* All c programs consists of one or more functions, where function(s) contain(s)  one or more statements.
+
+* A statement or Statements are the part of C program taht actually perform operations. A Statement specifies an action 
+to be performed by the C Program.
+All C Program's Statements end with a semicolon (;)
+for example:  return 0;  
+C Program does not recognize the end of the line as a terminator. This means there are no constraints on the position of 
+Statementsn within a Line.
+Also, Anyone may place two or more Staements on one line.
+for example: int x; printf("hello world");
+
+* Function Machanism:
+
+     putting input   ---->     input  processing      --->  return output
+
+* Function and Data Types:
+
+1. interger or decimal data [ number ] ( having no decimal or floating point ) :  2 , 207, 10000, 0, 
+   integer or decimal functions gives or return an interger/decimal data
+
+2. floating point data [ number ] ( having decimal point ) : 2.4 , 107.2244
+   floating point functions gives or return an floating point number
+
+3. charecter data [ letter/alphabet ] : c, e, f
+   charecter data functions gives or return a charecter data
+
+4. String data [ series of letters/alphabets or Words or sentence ] : cool, eat, foolish people can do anything
+   String data functions gives or return a String data
+
+5. void data [ nothing or empty ] : 
+   void  data functions gives or return a void data
+
+* Function Structure:
+   
+  Return_Data_Type Function_Name ( Parameter_list )
+  {
+    Statement 1;
+    Statement 2;
+  }
+
+if a function does not use parameters, then its parameter list should be contain the keyword void.
+
+* The only Function that C Program must have is Main Function [ main( ) ]. 
+The main function [ main ( ) ] is where execution of C Program begins. That is , when any C Program begins running, 
+it starts executing the statements inside
+Main function beginning with the 1st Statement after the Openning Curly Brace [ { ]. C Program ends 
+when Main function's Closing Curly Brace is reached [ } ].
+
+* Main function can be two types: either interger/decimal (int) or void 
+
+1. void main ( ) returns nothing. so, its parameter list should be contain the keyword void.  
+The Void tells the compiller that main( ) does not have any parameters.
+Hence, there is no statement inside of this.
+void main can be expressed :
+ i) void main(void)   ---> standard way    ii) void main( )    ---> common way
+
+2. int main ( ) returns an interger value and that is 0. : retrun 0;  --> this is the unchanged statement.
+By convention, a return value of zero( 0 ) from main( ) indicates normal program termination. 
+Any other value represents an Error : return 12; --> this is error statement.
+int main can be expressed in two ways:
+ i) int main(void)   ---> standard way   ii) int main( )    ---> common way
+
+Note: int main(void) or int main( ) is recommented
+
+* Keywords:
+the statement-->  return 0;
+in this statement, 'return' word is a Keyword. ANSI C Standard has total 32 Keywords that may not be used 
+as Function or Variable name.
+these are: 
+auto       else       register     typedef
+break      enum       return       union
+case       extern     short        unsigned
+char       float      signed       void
+continue   goto       sizeof       volatile
+default    if         static       while
+do         int        struct       double
+long       switch
+
+* Many C Compilers have added several additional kwywords that are used to take better advantages of the environment 
+in which the compiler is used and that give support for inrerlanguage programming, interrupts, and memory organizations.
+
+asm      _cs      _ds      _es         _ss
+cdecl    far      huge     iterrupt    near   pascal
+
+
+*codes without error:
+
+code1:
+void main(void)
+{
+
+}
+
+code2:
+void main( )
+{
+
+}
+
+code3:
+int main(void)
+{
+
+}
+
+code4:
+int main( )
+{
+
+}
+
+code5:
+int main(void)
+{
+  return 0;
+}
+
+code6:
+int main( )
+{
+  return 0;
+}
+
+*codes with error:
+
+code1:
+int main(void)
+{
+  return 205;
+}
+
+code2:
+int main( )
+{
+  return 1;
+}
