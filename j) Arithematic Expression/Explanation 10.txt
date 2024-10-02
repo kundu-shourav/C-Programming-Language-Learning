@@ -1,0 +1,71 @@
+*C Expressions follow the rules of Algebra.
+An EXPRESSION is a combination of operations and operands.
+
+* C defines these five arithmetic operations.
+ Operator                        Meaning
+..........                     ...........
+    +                           Addition
+    -                          Subtraction
+    *                          Multiplication
+    /                            Division
+    %                             Modulus  [ integer data only ]
+
+The (%) Modulus Operator produces the reminder of an integer division. eg: 5/2 = 1.5  5%2 = 1
+This has no meaning when applied to floating point types.
+
+* Operator's Precedance:
+
+High ------> ----------> Low
+
+      *  /   %  + -
+
+* Coder may use spaces liberally within an expression:
+    
+   answer = count - 100;
+
+* Arithmetic operation Expression at Return keyword
+Arithmetic exprerssion can be place after return keyword for any Function( ).
+The value associated with the return statement need not be a constant.
+It can be any valid C Expression:
+                                    return (x+y/z)
+
+* More than 1 variable print through Print function
+There is more than one argument to a function, the arguments are separated from each other by commas[,]
+eg;
+    printf("%d is integer; but %f is floting point and %c is character", a,b,c);
+
+* print function can print any function return value.
+   printf("function return value is : %d", func1(a));
+
+
+*codes:
+
+code1:
+/*arithmetic expression*/
+#include <stdio.h>
+int func1(int a);
+int main()
+{
+    int a,b,A,S,R;
+    float c,d,M,D;
+    a = 20; b = 10; c = 5.50; d = 2.50;
+    A = a + b; S = a - b; M = c * d; D = c / d;
+    //reminder or modulus
+    R = 5 % 2;
+    printf("A is %d, S is %d, M is %f, D is %f\n", A,S,M,D);
+    printf("R is %d\n", R);
+    //printf function speciality
+    printf("a is %d and function return value is: %d", a, func1(a));
+    return 0;
+}
+
+int func1(int a)
+{
+    /* ARITHMETIC EXPRESIION AFTER RETURN KEYWORD */
+    return a*10;
+}
+
+
+
+
+  

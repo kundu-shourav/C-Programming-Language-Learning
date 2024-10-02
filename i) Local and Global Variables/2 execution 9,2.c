@@ -23,5 +23,5 @@ void fun2(void)
 {
     int a = 20;
     printf("here a is local variable: %d", a);
-    printf("fun1 variable b is : %d\n", b); --> error line
+    printf("fun1 variable b is : %d\n", b); /*--> error line */
 }
